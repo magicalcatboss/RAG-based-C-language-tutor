@@ -8,7 +8,7 @@
 ## Phase 2: Core Development (User-Calibrated)
 
 ### Task 1: Vector Store & Embedding Module
-- [ ] Install `chromadb` and `sentence-transformers`.
+- [ ] Install `FAISS` and `sentence-transformers`.
 - [ ] Implement `VectorStore` class supporting document addition and similarity search.
 
 ### Task 2: CppReference Data Scraper
