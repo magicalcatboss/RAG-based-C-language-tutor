@@ -20,3 +20,7 @@ Thumbs.db
 .idea/
 *.swp
 *.bak
+
+# Project specific
+chroma/
+.env

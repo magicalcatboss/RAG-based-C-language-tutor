@@ -1,37 +1,32 @@
-# Project Plan & Todo List
+# Project Plan: RAG-based C language Tutor
 
-## Phase 1: Project Initialization & Setup
-- [ ] Create project directory and detailed folder structure
-- [ ] Initialize Git repository
-- [ ] Create `README.md` with project description
-- [ ] Create `PROJECT_PLAN.md` with detailed todo list
+## Phase 1: Infrastructure & Meta Files
+- [x] Git & GitHub Initialization
+- [x] Project Meta Files (.gitignore, LICENSE)
+- [ ] Dependency Management (requirements.txt)
 
-## Phase 2: Knowledge Base & RAG Pipeline
-- [ ] Define data sources (C Programming Standards - MISRA, CERT C, etc.)
-- [ ] Design data ingestion scripts (Python)
-    - [ ] PDF/Markdown text extraction
-    - [ ] Text chunking and cleaning
-- [ ] Set up Vector Database (e.g., ChromaDB or FAISS)
-- [ ] Implement Embedding generation (using HuggingFace or OpenAI embeddings)
-- [ ] Develop Retrieval System (Query processing and similarity search)
+## Phase 2: Core Development (User-Calibrated)
 
-## Phase 3: Backend API (Python/FastAPI)
-- [ ] Setup Python virtual environment and `requirements.txt`
-- [ ] Initialize FastAPI application
-- [ ] Create RAG Management Endpoints (Ingest, Clear DB)
-- [ ] Create Chat Endpoint (Similarity search + LLM Context Injection)
-- [ ] Implement System Prompt specialized for C Language Standards
+### Task 1: Vector Store & Embedding Module
+- [ ] Install `chromadb` and `sentence-transformers`.
+- [ ] Implement `VectorStore` class supporting document addition and similarity search.
 
-## Phase 4: Frontend Application (React/Vite)
-- [ ] Initialize React Project with Vite (TypeScript recommended)
-- [ ] Setup UI Components (TailwindCSS)
-    - [ ] Chat Window
-    - [ ] Message Input
-    - [ ] Source/Reference Display
-- [ ] Integrate API with Frontend
-- [ ] Polish UI/UX (Markdown rendering for code blocks)
+### Task 2: CppReference Data Scraper
+- [ ] Develop `crawl_cppreference` function for content extraction.
+- [ ] Clean data and perform batch ingestion into the vector store.
 
-## Phase 5: Testing & Deployment
-- [ ] Verify answers against specific C standards
-- [ ] Dockerize application (Dockerfile & docker-compose.yml)
-- [ ] Write documentation for usage and contribution
+### Task 3: Gemini API Integration
+- [ ] Integrate `google-generativeai`.
+- [ ] Design professional C Tutor system prompt template.
+
+### Task 4: FastAPI Backend Integration
+- [ ] Develop `main.py` to orchestrate retrieval and generation logic.
+- [ ] Expose `/ask` endpoint.
+
+## Phase 3: UI & Interaction
+- [ ] Develop Streamlit chat interface.
+- [ ] Implement Markdown rendering and code syntax highlighting.
+
+## Phase 4: Testing & Deployment
+- [ ] Verify retrieval accuracy and edge-case handling.
+- [ ] Dockerize the application.

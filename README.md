@@ -1,19 +1,35 @@
-# RAG-based C Language Tutor
+# RAG-based C language Tutor
 
-## Project Description
-This project is an AI-powered assistant designed specifically to answer questions regarding C language programming standards (such as MISRA C, SEI CERT C, etc.). It helps developers write safer, more compliant code by retrieving relevant information from a curated knowledge base of C standards.
+An intelligent C programming tutor powered by Retrieval-Augmented Generation (RAG). It leverages high-quality standard documentation from CppReference and Google's Gemini API to provide accurate and reliable answers for C learners.
 
-## Key Features
-- **Retrieval-Augmented Generation (RAG)**: Combines LLM capabilities with a verified knowledge base of C standards.
-- **Specialized Knowledge**: Focused on C safety and security standards.
-- **Interactive Chat Interface**: Web-based UI for easy interaction.
-- **Source Citations**: Provides references to the specific standard sections used in the answer.
+## Core Architecture (4-Step Workflow)
+
+1.  **Vector Store**: High-efficiency local retrieval using `ChromaDB` and `sentence-transformers`.
+2.  **Data Acquisition**: Extracting high-quality standard documentation from `CppReference`.
+3.  **Generation Engine**: Integration with `Google Gemini API` as the core reasoning brain.
+4.  **Web Service**: Backend API built with `FastAPI`.
+
+## Quick Start
+
+### 1. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Environment Configuration
+Create a `.env` file in the root directory and add:
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+### 3. Run the Service
+```bash
+uvicorn main:app --reload
+```
 
 ## Tech Stack
-- **Backend**: Python, FastAPI
-- **Frontend**: React, Vite
-- **Vector Database**: ChromaDB / FAISS
-- **LLM Integration**: OpenAI API / Local LLM (via Ollama/LlamaCpp)
-
-## Getting Started
-(Instructions to be added)
+- **LLM**: Google Gemini
+- **Embedding**: all-MiniLM-L6-v2
+- **Vector DB**: ChromaDB
+- **Backend**: FastAPI
+- **Scraper**: BeautifulSoup4
