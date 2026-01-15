@@ -2,7 +2,7 @@
 An intelligent C programming tutor powered by Retrieval-Augmented Generation (RAG). It leverages high-quality standard documentation from CppReference and Google's Gemini API to provide accurate and reliable answers for C learners.
 
 ## Core Architecture (4-Step Workflow)
-1.  **Vector Store**: High-efficiency local retrieval using `ChromaDB` and `sentence-transformers`.
+1.  **Vector Store**: High-efficiency local retrieval using `FAISS` and `sentence-transformers`.
 2.  **Data Acquisition**: Extracting high-quality standard documentation from `CppReference`.
 3.  **Generation Engine**: Integration with `Google Gemini API` as the core reasoning brain.
 4.  **Web Service**: Backend API built with `FastAPI`.
@@ -10,6 +10,6 @@ An intelligent C programming tutor powered by Retrieval-Augmented Generation (RA
 ## Tech Stack
 - **LLM**: Google Gemini
 - **Embedding**: all-MiniLM-L6-v2
-- **Vector DB**: ChromaDB
+- **Vector DB**: FAISS
 - **Backend**: FastAPI
 - **Scraper**: BeautifulSoup4
