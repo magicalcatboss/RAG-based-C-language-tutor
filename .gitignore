@@ -1,0 +1,22 @@
+# C artifacts
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+ENV/
+
+# OS and IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.bak
