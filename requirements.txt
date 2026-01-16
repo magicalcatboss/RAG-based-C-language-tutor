@@ -1,0 +1,11 @@
+streamlit
+requests
+fastapi
+uvicorn
+pydantic
+python-dotenv
+google-generativeai
+faiss-cpu
+numpy
+sentence-transformers
+beautifulsoup4
